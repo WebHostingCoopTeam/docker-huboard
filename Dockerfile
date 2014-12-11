@@ -6,7 +6,8 @@ RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/
 RUN apt-get update
 
 # Install basic packages
-RUN apt-get -qq -y install git curl build-essential
+#RUN apt-get -qq -y install git curl build-essential
+RUN apt-get -y install git curl build-essential
 
 # Install Ruby 2.0
 RUN apt-get -qq -y install python-software-properties
