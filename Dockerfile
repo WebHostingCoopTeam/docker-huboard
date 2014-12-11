@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 MAINTAINER Josh Cox <josh 'at' webhosting coop>
 
 # Run upgrades
-RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
+#RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get update
 
 # Install basic packages
