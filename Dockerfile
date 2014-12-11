@@ -1,8 +1,8 @@
-FROM ubuntu:12.04
-MAINTAINER Daekwon Kim <propellerheaven@gmail.com>
+FROM ubuntu:14.04
+MAINTAINER Josh Cox <josh 'at' webhosting coop>
 
 # Run upgrades
-RUN echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe" > /etc/apt/sources.list
 RUN apt-get update
 
 # Install basic packages
@@ -26,6 +26,7 @@ RUN cd /app; bundle install;
 ADD .env /app/.env
 ADD Procfile /app/Procfile
 
+# PORTS_FROM_HOST 5000 5000
 # Run Huboard instance
 EXPOSE 5000
 CMD foreman start -f /app/Procfile
